@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.onur.obd2">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
+    <!-- The following two permissions are required for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".View.CreateProfileActivity">
+        </activity>
+        <activity android:name=".View.StartActivity">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA0Njdi8cn_yMx72Qoldiy-7k743AJNJTk"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name=".View.MapsActivity"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <activity android:name=".View.OxygenActivity">
+        </activity>
+        <activity android:name=".View.CarbonDioxideActivity">
+        </activity>
+        <activity android:name=".View.FuelAmountActivity">
+        </activity>
+        <activity android:name=".View.WiperWaterActivity">
+        </activity>
+        <activity android:name=".View.SpeedTimingActivity">
+        </activity>
+        <activity android:name=".View.EngineOilActivity">
+        </activity>
+        <activity android:name=".View.TransmissionActivity">
+        </activity>
+        <activity android:name=".View.ResultActivity">
+        </activity>
+        <activity android:name=".View.ControlSensorActivity">
+        </activity>
+    </application>
+
+</manifest>
